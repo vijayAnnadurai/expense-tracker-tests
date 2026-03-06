@@ -8,6 +8,7 @@ const router = Router();
 router.get('/', async (_req: Request, res: Response) => {
   try {
     const categories = await db('categories').select<Category[]>('*');
+    logger.info({ count: categories.length }, 'Fetched categories');
     res.json(categories);
   } catch (error) {
     logger.error({ err: error }, 'Failed to fetch categories');

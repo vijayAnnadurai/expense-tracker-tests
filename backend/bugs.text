@@ -1,0 +1,9 @@
+Bugs :
+
+* upon clicking edit button in dashboard, exense is going to Expenses tab instead of opening the expense.
+* Date is not accurate on the expense item. It is posting one day before the actual selected expense date.
+Upon selecting "This month" in expense tab,results show last month expense item . 
+Upon selecting "Last month" in expense tab, result is missing last expense item for that month.
+Upon selecting "custom" date, result is showing one item prior to the selected custom date range.
+
+Important Bug: Expense created in one user portal showing up in another user portal. Mutil tenant data separation (serious security bug)
