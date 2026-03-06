@@ -98,7 +98,7 @@ export async function deleteExpense(id: number, userId: number): Promise<boolean
 }
 
 export async function getMonthlyTotal(userId: number, year: number, month: number): Promise<number> {
-  const startDate = `${year}-${String(month).padStart(2, '0')}-01`;
+  const startDate = `${year}-${String(month).padStart(2, '0')}-01`; 
   const endDate = new Date(year, month, 0).toISOString().split('T')[0];
 
   const result = await db('expenses')
